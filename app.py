@@ -57,11 +57,6 @@ def index():
     # store chatbot response message to session message tread
     session['messages'].append(response_message)
 
-    print("="*20)
-    print(response_message)
-    print("="*20)
-    print(session['messages'])
-
     try:
         function_name = response.choices[0].message.function_call.name
         function_args = json.loads(response.choices[0].message.function_call.arguments)
