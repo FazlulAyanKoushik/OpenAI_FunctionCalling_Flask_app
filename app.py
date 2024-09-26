@@ -26,7 +26,7 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 
-@app.route('/',)
+@app.route('/chat',)
 def index():
     user_message = request.json.get('message')
 
