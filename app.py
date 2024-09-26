@@ -28,8 +28,8 @@ Session(app)
 
 @app.route('/',)
 def index():
-    # user_message = request.json.get('message')
-    user_message = "available foods"
+    user_message = request.json.get('message')
+
     if not user_message:
         return jsonify({"error": "No message provided"}), 400
 
